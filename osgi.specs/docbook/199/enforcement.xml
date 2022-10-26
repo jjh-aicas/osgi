@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) Contributors to the Eclipse Foundation
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+    SPDX-License-Identifier: Apache-2.0
+ -->
+<chapter label="199"
+         revision="$Id$"
+         version="5.0" xml:id="enforcement"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:ns5="http://www.w3.org/2000/svg"
+         xmlns:ns4="http://www.w3.org/1998/Math/MathML"
+         xmlns:ns3="http://www.w3.org/1999/xhtml"
+         xmlns:ns="http://docbook.org/ns/docbook">
+  <title>Resource Enforcement Specification</title>
+
+  <info>
+    <releaseinfo><xref endterm="org.osgi.service.feature-version"
+    linkend="org.osgi.service.feature"/></releaseinfo>
+  </info>
+
+  <section>
+    <title>Introduction</title>
+    <para>
+      Applications, executed on an OSGi platform, need hardware
+      resources (CPU, memory, disk storage space) and software resources
+      (sockets, threads).  As these resources are limited,; applications
+      must share them in order to preserve system quality of service.
+      This is particularly true of IoT systems.
+    </para>
+    <para>
+      Providing well defined resource management features is crucial
+      for OSGi to succeed in the IoT market, as IoT requires high
+      robustness even for systems open to third party applications.
+      In this perspective, the framework administrator has to offer
+      well defined guarantees to every actor sharing the platform and
+      the system must be robust against faulty bundles.  These
+      guarantees must consider both the resources available and the
+      importance of each bundle.
+    </para>
+    <para>
+      Resource enforcement is also vital to Cloud Computing scenarios
+      where a management agent needs to ensure that SLAs agreed around
+      the cloud offering are met.  When a cloud node becomes
+      overloaded or fails this can affect the agreed SLA and action
+      needs to be taken.  In a Cloud Computing scenario this may imply
+      starting additional nodes, adjusting the provisioning state of
+      the system by moving or adding deployments or indeed shutting
+      down some nodes if the system has become quiet.  To be able to
+      handle such scenarios the management agent will need to have
+      visibility of the resource utilization of the cloud system as a
+      whole, which encompasses a multiple of nodes and runtimes.
+    </para>
+    <para>
+      For the moment, existing OSGi specifications do not provide
+      resource enforcement mechanism ensuring a well defined resource
+      sharing between bundles and applications. The underlying JVM
+      provides only some standard mechanisms at a level that is too
+      fine-grained, e.g., classes, objects, methods.  Since the bundle
+      is the smallest deployment unit of interest for platform
+      administrators and application providers, this RFP describes
+      needs and requirements of such features at the OSGi bundle
+      level.
+    </para>
+    <para>
+      This specification is not only of interest for the realm of
+      embedded devices but might be useful to other domains, such as
+      Enterprise, where robustness is also important.
+    </para>
+    <section>
+      <title>Essentials</title>
+    </section>
+    <section>
+      <title>Entities</title>
+    </section>
+    <section>
+      <title>Operation</title>
+    </section>
+
+  </section>
+
+  <section>
+    <title>Resource Enforce Service</title>
+  </section>
+
+  <section>
+    <title></title>
+  </section>
+
+  <section>
+    <title>org.osgi.service.enforce</title>
+  </section>
+
+  <section>
+    <title>References</title>
+
+    <bibliolist>
+      <bibliomixed xml:id="rtsj.ref">
+        <title>Realtime and Embedded Specification for Java</title>
+        <biblioid class="uri">
+          <link xlink:href="https://www.rtsj2.org"/>
+        </biblioid>
+      </bibliomixed>
+    </bibliolist>
+  </section>
+</chapter>
